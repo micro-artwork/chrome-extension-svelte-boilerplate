@@ -11,7 +11,7 @@ import sveltePreprocess from 'svelte-preprocess';
 const mode = process.env.NODE_ENV || 'development';
 const prod = mode === 'production';
 
-const createConfig = (name, useSvelte = false, additioalPlugins = []) => {
+const createConfig = (name, useSvelte = false, additionalPlugins = []) => {
   return {
     input: `src/${name}/index.js`,
     output: {
@@ -42,7 +42,7 @@ const createConfig = (name, useSvelte = false, additioalPlugins = []) => {
       }),
       commonjs(),
       prod && terser(),
-      ...additioalPlugins,
+      ...additionalPlugins,
     ],
   };
 };
