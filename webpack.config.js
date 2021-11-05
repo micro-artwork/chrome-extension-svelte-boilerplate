@@ -4,13 +4,10 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const path = require('path');
 
-const dotenv = require('dotenv');
-const env = dotenv.config().parsed;
-
-const mode = env.NODE_ENV || 'development';
+const mode = process.env.NODE_ENV || 'development';
 const prod = mode === 'production';
 
-var options = {
+let options = {
   context: path.resolve(__dirname, './src'),
   entry: {
     popup: './popup/index.js',
