@@ -35,3 +35,7 @@ chrome://extensions/
 
 ![test](https://micro-artwork.github.io/images/etc/boilerplate.gif)
 
+
+## Note
+
+Content-scripts template base is Svelte. But if won't need to insert UI components, need not Svelte and can use Vanilla JS.
